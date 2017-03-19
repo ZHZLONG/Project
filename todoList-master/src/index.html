@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- build:css css/combined.css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery-datetimepicker.css">
+    <!-- endbuild -->
+    <title>todoList</title>
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <p class="browser-upgrade">请更新您的浏览器,<a href="http://www.browsehappy.com">去这里</a></p>
+    <![endif]-->
+    <div class="container clearfix">
+        <div class="task-notice">
+            <!--事件提醒-->
+        </div>
+        <h1 class="text-center">ToDo</h1>
+        <div class="content">
+            <form class="add-task">
+                <input name="content" type="text" placeholder="e.g 记得完成简历" autocomplete="off" autofocus="true">
+                <button class="pull-right" type="submit">提交</button>
+            </form>
+            <ul class="task-list">
+                <!--js渲染taskItem-->
+            </ul>
+            <section class="task-detail">
+                <span class="task-detail-content pull-right">
+                    <p class="task-content" contenteditable="true">记得完成简历</p>
+                    <textarea class="task-desc" placeholder="description"></textarea>
+                    <span class="task-remind">
+                        <label for="datetimepicker" style="color: white">提醒时间:</label>
+                        <input type="text" id="datetimepicker">
+                        <button id="detailSubmit" type="submit" class="pull-right">提交</button>
+                    </span>
+                </span>
+            </section>
+            <button class="select-all pull-right">全部</button>
+            <button class="select-complete pull-right">已完成</button>
+            <button class="select-unfinished pull-right">未完成</button>
+            <button id="clear" class="clear pull-right">清空</button>
+        </div>
+        <video src="7499.wav" class="alert"></video>
+    </div>
+</body>
+</html>
+<!-- build:js scripts/combined.js -->
+<script src="js/vendor/store.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/jquery-datetimepicker.js"></script>
+<script src="js/base.js"></script>
+<!-- endbuild -->
